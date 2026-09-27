@@ -18,7 +18,14 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr]">
           <div>
             <span className="inline-block overflow-hidden rounded-2xl border border-white/10 shadow-soft">
-              <img src={logo} alt={company.name} width={780} height={493} loading="lazy" className="h-20 w-auto" />
+              <img
+                src={logo}
+                alt={company.name}
+                width={780}
+                height={493}
+                loading="lazy"
+                className="h-20 w-auto"
+              />
             </span>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/65">
               Transforming houses into masterpieces with professional finishing services across
@@ -46,7 +53,11 @@ export function Footer() {
             <ul className="mt-5 space-y-3 text-sm text-white/65">
               {["home", "about", "services", "projects", "team", "faq", "contact"].map((h) => (
                 <li key={h}>
-                  <Link to="/" hash={h} className="capitalize transition-colors hover:text-accent-gold-soft">
+                  <Link
+                    to="/"
+                    hash={h}
+                    className="capitalize transition-colors hover:text-accent-gold-soft"
+                  >
                     {h === "faq" ? "FAQ" : h}
                   </Link>
                 </li>
@@ -59,7 +70,11 @@ export function Footer() {
             <ul className="mt-5 space-y-3 text-sm text-white/65">
               {services.slice(0, 7).map((s) => (
                 <li key={s.title}>
-                  <Link to="/" hash="services" className="transition-colors hover:text-accent-gold-soft">
+                  <Link
+                    to="/"
+                    hash="services"
+                    className="transition-colors hover:text-accent-gold-soft"
+                  >
                     {s.title}
                   </Link>
                 </li>
@@ -100,7 +115,10 @@ export function Footer() {
                 setEmail("");
               }}
             >
-              <label htmlFor="newsletter" className="text-xs font-bold tracking-[0.2em] text-white/50 uppercase">
+              <label
+                htmlFor="newsletter"
+                className="text-xs font-bold tracking-[0.2em] text-white/50 uppercase"
+              >
                 Newsletter
               </label>
               <div className="mt-3 flex overflow-hidden rounded-full border border-white/15 bg-white/5 focus-within:border-accent-gold">
@@ -126,8 +144,32 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/45 sm:flex-row">
-          <p>© {new Date().getFullYear()} {company.name}. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} {company.name}. All rights reserved.
+          </p>
           <p>Transforming Zimbabwean houses into masterpieces.</p>
+        </div>
+
+        <div className="mt-8 text-center text-sm tracking-wide">
+          <p className="text-white/55">
+            Powered by{" "}
+            <a
+              href="https://wa.me/263776611049"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-orange-500 transition-colors hover:text-orange-400"
+            >
+              Digits Digital
+            </a>
+          </p>
+          <a
+            href="https://www.digitsdigital.co.zw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-block text-white/45 transition-colors hover:text-white"
+          >
+            www.digitsdigital.co.zw
+          </a>
         </div>
       </div>
     </footer>
